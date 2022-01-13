@@ -1,0 +1,583 @@
+/*
+ * CSS Styles for Application
+ *
+ */
+
+/* My Created Css */
+
+body{
+  background-color: whitesmoke;
+  font-family: Times;
+  margin: 0;
+}
+
+ /* Header css */
+.header{
+  height: auto;
+  width: auto;
+  background-color: rgb(173, 28, 28);
+}
+
+.header ul{
+  list-style-type: none;
+  text-align: right;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.header ul li{
+  display: inline-block;
+  padding: 10px;
+}
+
+.header ul li a{
+  text-decoration: none;
+  color: aliceblue;
+  padding: 10px;
+}
+
+.header ul li a:hover{
+  border-radius: 20px;
+  padding: 10px;
+  color: black;
+  background-color: aliceblue;
+}
+/* Content css */
+.content{
+  margin: 8px;
+}
+/* Title and blurb css */
+.content h1{
+  text-align: center;
+  padding: 4px;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: bold;
+}
+.content h2{
+  text-align: center;
+  padding: 4px;
+  font-size: 26px;
+}
+
+.content h3{
+  text-align: center;
+  padding: 4px;
+  font-size: 22px;
+  color: red;
+}
+
+.content .blurb{
+  background-color: rgb(197, 197, 197);
+  text-align: center;
+  padding: 8px;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 15px;
+  border-style: solid;
+  max-width: 500px;
+  line-height: 150%;
+  margin: 5px auto 5px auto;
+  font-size: 22px;
+}
+
+/* Buttons css */
+.btnWrapper{
+  text-align: center;
+  max-width: 600px;
+  margin: 12px auto 5px auto;
+}
+.btnWrapper .btnBrown{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 10px 50px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: black;
+  background-color: rgb(173, 28, 28);
+  color: white;
+}
+.btnWrapper .btnBlue{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 10px 50px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: black;
+  background-color: rgb(0, 234, 255);
+  color: black;
+}
+
+/* Create acc btn css*/
+.btnWrapper .caBtnBrown{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  width: 600px;
+  padding: 10px 0px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: black;
+  background-color: rgb(173, 28, 28);
+  color: white;
+}
+/* Create acc btn css*/
+.btnWrapper .laBtnBlue{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  width: 600px;
+  padding: 10px 0px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: black;
+  background-color: rgb(0, 234, 255);
+  color: rgb(0, 0, 0);
+}
+
+.btnWrapper .daBtnRed{
+  background-color: rgb(255, 0, 0);
+  color: black;
+  border-color: rgb(0, 0, 0);
+  border-width: 3px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+/* Create acc formWrapper css */
+.formWrapper{
+  width: 600px;
+  margin: 5px auto 5px auto;
+  padding: 10px;
+}
+
+.formError{
+  display: none;
+  margin: 0 0 10px 0;
+  color: rgb(255, 0, 0);
+  font-size: 24px;
+}
+
+.formWrapper .inputWrap {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-color: black;
+  border-width: 2px;
+}
+.formWrapper .inputWrap .inputlabel{
+  font-weight: bold;
+  font-size: 24px;
+  color: black;
+}
+.formWrapper .inputWrap input{
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border-color: black;
+  border-width: 2px;
+}
+
+/* Footer css */
+.footer{
+  margin-top: 90px;
+  text-align: center;
+  background-color: whitesmoke;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  padding: 45px 15px;
+  border-width: 1px 0 0 0;
+  border-color: rgb(144, 144, 144);
+  border-style: solid;
+}
+
+/* .copyright{
+  text-align: center;
+  background-color: aqua;
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: rgb(0, 0, 0);
+} */
+
+/* Create acc page css */
+.content h1{
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* hiding some button according to user state (login or logout) */
+.header li .isloggedin{
+  display: none;
+}
+body.isloggedin .header ul li .isloggedin{
+  display: inline-block;
+}
+body.isloggedin .header ul li .isloggedout{
+  display: none;
+}
+
+/* create check css */
+#checkMethod{
+  padding: 8px;
+  border-radius: 5px;
+}
+#checkProtocol{
+  padding: 8px;
+  border-radius: 5px;
+}
+#checkTimeout{
+  padding: 8px;
+  border-radius: 5px;
+}
+#checkStatusCodes input{
+  display: inline-block;
+  width: initial;
+  background-color: aqua;
+  padding: 4px;
+}
+input.multiselect{
+  margin: 12px;
+  transform: scale(2);
+  border-color: black;
+}
+
+table{
+  width: 100%;
+  margin: 20px auto 10px auto;
+  padding: 5px 50px 5px 50px;
+  align-items: center;
+}
+
+tr{
+  width: 100%;
+}
+
+th{
+  width: 100px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 5px;
+  border-color: #000;
+  border-width: 2px;
+  border-style: solid;
+  margin: 0 0 10px 0;
+  background-color: #efefef;
+}
+
+td{
+  padding: 5px;
+  text-align: center;
+  font-size: 24px;
+  border-color: #000;
+  border-width: 2px;
+  border-style: solid;
+}
+
+
+
+
+
+/* My Css Ends */
+
+
+
+
+/* Resets */
+/* Pirple Copied Css */
+/* body,p,h1,h2,h3,h4,h5,h6,div,span,header,footer,img,a,a:hover,a:active,a:visited,table,tr,td,th,form,input,button,select,textarea{ */
+    /* line-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #1a1a1a;
+    border-width: 0;
+  }
+  
+  .clear{
+    float: none;
+    width: 100%;
+    height: 1px;
+  }
+  
+  /* Main color palette */
+  /* .header{
+    background-color: #fff;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #fff;
+    box-shadow: 0 -25px 11px 20px #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    min-width: 1200px;
+  } */
+  
+  /* .header ul{
+    list-style-type: none;
+    text-align: right;
+    padding: 0 75px;
+    float: right;
+  }
+  
+  .header ul li{
+    display: inline-block;
+    padding: 10px 10px 0 10px;
+  }
+  
+  .header ul li a{
+    text-transform: uppercase;
+    font-weight: 900 !important;
+    font-size: 11px;
+  }
+  
+  .header ul li.loggedIn{
+    display: none;
+  }
+  
+  body.loggedIn .header ul li.loggedIn{
+    display: inline-block;
+  }
+  
+  body.loggedIn .header ul li.loggedOut{
+    display: none;
+  }
+  
+  .header .logo{
+    text-align: left; */
+    /* padding: 0 0 0 90px;
+    float: left;
+  }
+  
+  .header .logo img{
+      width: 50px;
+  }
+  
+  .content {
+    margin-top: 150px;
+    width: 1000px;
+    margin: 150px auto;
+  }
+  
+  .footer{
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 50px 0;
+    text-align: center;
+    border-width: 1px 0 0 0;
+    border-color: #fff;
+    border-style: solid;
+  }
+  
+  .footer .copyright{
+    color: #fff;
+    font-size: 10px;
+  } */
+  
+  /* Index */
+  /* h1{
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 0 5px 0;
+  }
+  
+  h2{
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 0 20px 0;
+  }
+  
+  body.index .blurb{
+    text-align: center;
+    background-color: #ececec;
+    border-color: #b3b3b3;
+    border-style: dotted;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto 20px auto;
+    max-width: 500px;
+    line-height: 150%;
+    font-size: 14px;
+  }
+  
+  .ctaWrapper{
+    text-align: center;
+  }
+  
+  .cta,a.cta:hover,a.cta:active,a.cta:visited,button.cta:hover,button.cta:active,button.cta:visited{
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    padding: 15px;
+    width: 150px;
+    cursor: pointer;
+  } */
+  
+  /* .cta.blue{
+    background-color: #214478 !important;
+  }
+  
+  .cta.green{
+    background-color: #217844 !important;
+  }
+  
+  .cta.red{
+    background-color: #c83737 !important;
+  }
+  
+  .warning{
+    font-style: italic;
+    color: #c83737;
+    font-size: 17px;
+    text-align: center;
+    line-height: 150%;
+    padding: 0 0 20px 0 ;
+  } */
+  
+  /* Form Styling for Account Creation page and others */
+  /* .formWrapper{
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 15px;
+  }
+  
+  .formError{
+    display: none;
+    background-color: #c83737;
+    font-style: italic;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 0 15px 0;
+    text-align: center;
+    border-color: #d87070;
+    border-width: 2px;
+    border-style: solid;
+  }
+  
+  .formSuccess{
+    display: none;
+    background-color: #217844;
+    font-style: italic;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 0 15px 0;
+    text-align: center;
+    border-color: #35c06d;
+    border-width: 2px;
+    border-style: solid;
+  }
+  
+  hr {
+    margin: 30px 0;
+  }
+  
+  input,select,option {
+    border-width: 1px;
+    border-radius: 2px;
+    padding: 7px 1%;
+    width: 100%;
+  }
+  
+  .checkboxGroup input{
+    display: inline-block;
+    width: initial;
+    margin: 20px;
+  }
+  
+  input.disabled{
+    background-color: #efefef;
+  }
+  
+  .inputWrapper{
+    padding: 0 0 20px 0;
+  }
+  
+  .inputLabel{
+    padding: 0 0 5px 0;
+    color: #808080;
+  }
+  
+  .backButton{
+    text-transform: uppercase;
+    font-weight: bold !important;
+    display: inline-block !important;
+    width: 100px;
+    padding: 7px !important;
+    color: #fff !important;
+    background-color: #1a1a1a;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  table{
+    width: 100%;
+  }
+  
+  tr{
+    width: 100%;
+  }
+  
+  th{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    border-color: #000;
+    border-style: dotted;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    background-color: #efefef;
+  }
+  
+  td{
+    padding: 5px;
+  }
+  
+  td a, td a:hover, td a:active{
+    color: #2e5fa8;
+    text-decoration: underline;
+    cursor: pointer;
+  } */
+  
+  /* Page specific styles for dashboard */
+/*   
+  #noChecksMessage td{
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    padding: 20px;
+  }
+  
+  #noChecksMessage{
+    display: none;
+  }
+  
+  #createCheckCTA{
+    margin-top: 40px;
+    display: none; */
+  /* } */ 

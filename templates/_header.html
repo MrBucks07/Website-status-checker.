@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <!-- General Settings -->
+        <meta charset="utf-8">
+        <meta http-equiv="content-language" content="en-us">
+        <base href="{global.baseurl}" />
+
+        <!-- Meta Tags -->
+        <title> {head.title} | {global.appName} </title>
+        <meta name="description" content="{head.description}">
+
+        <!-- Static Assets -->
+        <link type="image/x-icon" rel="icon" href="favicon.ico">
+        <script type="text/javascript" charset="utf-8" src="public/app.js"></script>
+        <link rel="stylesheet" type="text/css" href="public/app.css"/>
+        <!-- <link rel="stylesheet" href="public/app.css"> -->
+
+    </head>
+    <body class="{body.class}">
+
+        <!-- Page Wrapper -->
+        <div class="wrapper">
+
+        <!-- Header -->
+        <div class="header">
+
+            <!--app logo-->
+            <a class="logo" href="/"></a>
+
+            <!--Un ordered list of items.-->
+            <ul>
+                <li>
+                    <a  class="isloggedout" href="#">Home</a>
+                </li>
+                <li>
+                    <a class="isloggedout" href="session/create">SignIn</a>
+                </li>
+                <li>
+                    <a class="isloggedout" href="account/create">SignUp</a>
+                </li>
+                <li>
+                    <a class="isloggedin" href="checks/all">Dashboard</a>
+                </li>
+                <li>
+                    <a class="isloggedin" href="account/edit">Accounts Settings</a>
+                </li>
+                <li>
+                    <a class="isloggedin" id="logoutButton" href="session/deleted">Logout</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Page Specific Content -->
+        <div class="content">

@@ -1,0 +1,55 @@
+<h1>Creating New Check !</h1>
+<h2>You can create upto five checks only.</h2>
+<hr>
+<div class="formWrapper">
+    <div class="formError"></div>
+    <form id="createCheck" action="/api/checks" method="POST">
+        <div class="inputWrap">
+            <div class="inputlabel">Protocol</div>
+            <select id="checkProtocol" name="protocol">
+                <option value="http" selected>HTPP</option>
+                <option value="https">HTTPS</option>
+            </select>
+        </div>
+
+        <div class="inputWrap">
+            <div class="inputlabel">Url (not full url.)</div>
+            <input type="text" name="url" placeholder="Ex : google.com/path">
+        </div>
+
+        <div class="inputWrap">
+            <div class="inputlabel">Method</div>
+            <select id="checkMethod" name="method">
+                <option value="get" selected>GET</option>
+                <option value="post">POST</option>
+                <option value="put">PUT</option>
+                <option value="delete">DELETE</option>
+            </select>
+        </div>
+
+        <div class="inputWrap">
+            <div class="inputlabel">Status Codes</div>
+            <div id="checkStatusCodes" class="checkBoxGroup">
+                200<input class="multiselect" type="checkbox" name="successCodes" value="200" checked>
+                201<input class="multiselect" type="checkbox" name="successCodes" value="201">
+                300<input class="multiselect" type="checkbox" name="successCodes" value="300">
+                301<input class="multiselect" type="checkbox" name="successCodes" value="301">
+            </div>
+        </div>
+
+        <div class="inputWrap">
+            <div class="inputlabel">Timeout Seconds</div>
+            <select class="timeout" id="checkTimeout" name="timeoutSeconds">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <div class="btnWrapper">
+            <button class="laBtnBlue" type="submit">Create Check</button>
+        </div>
+    </form>
+</div>

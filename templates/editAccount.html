@@ -1,0 +1,37 @@
+<h2>Edit your accounts details.</h2>
+
+<div class="formWrapper">
+    <div class="formError"></div>
+    <form id="accountEdit" action="/api/users" method="PUT">
+        <div class="inputWrap">
+            <div class="inputlabel">Account Phone no.</div>
+            <input class="mobilenoInput" type="text" name="mobileno" disabled>
+        </div>
+
+        <div class="inputWrap">
+            <div class="inputlabel">Fullname</div>
+            <input class="fullnameInput" type="text" name="fullname" placeholder="Change fullname">
+        </div>
+
+        <div class="inputWrap">
+            <div class="inputlabel">Username</div>
+            <input class="usernameInput" type="text" name="username" placeholder="Change username">
+        </div>
+
+        <div class="inputWrap">
+            <div class="inputlabel">Password</div>
+            <input class="passwordInput" type="password" name="password" placeholder="Change password">
+        </div>
+
+        <div class="btnWrapper">
+            <button type="submit" class="laBtnBlue">Edit Details</button required>
+        </div>
+
+    </form>
+</div>
+
+<hr/>
+<h3>Delete Account ! Warning : Your all data will be erased.</h3>
+<div class="btnWrapper">
+    <button id="deleteAccountBtn" class="daBtnRed" type="submit">Delete Account</button required>
+</div>

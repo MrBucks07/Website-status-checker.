@@ -1,0 +1,26 @@
+<h1>Create Account in few simple steps.</h1>
+
+<div class="formWrapper">
+    <div class="formError"></div>
+    <form id="accountCreate" action="/api/users" method="POST">
+        <div class="inputWrap">
+            <div class="inputlabel">Fullname</div>
+            <input type="text" name="fullname" placeholder="ex:Jhon Patel" required>
+        </div>
+        <div class="inputWrap">
+            <div class="inputlabel">Username</div>
+            <input type="text" name="username" placeholder="ex:kkartik07" required>
+        </div>
+        <div class="inputWrap">
+            <div class="inputlabel">Mobile no.</div>
+            <input type="number" name="mobileno" placeholder="ex:79596596842" required>
+        </div>
+        <div class="inputWrap">
+            <div class="inputlabel">Create Password</div>
+            <input type="password" name="password" placeholder="ex:Create strong password" required>
+        </div>
+        <div class="btnWrapper">
+            <button type="submit" class="caBtnBrown">Create Account</button>
+        </div>
+    </form>
+</div>

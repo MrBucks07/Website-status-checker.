@@ -1,0 +1,71 @@
+<h2>Editing Your Check.</h2>
+<hr>
+
+<div class="formWrapper">
+    <div class="formError"></div>
+    <form id="editCheck" action="/api/checks" method="PUT">
+        <div class="inputWrap">
+            <div class="inputlabel">Check Id</div>
+            <input class="displayCheckId" type="text" name="checkId" disabled>
+        </div>
+
+        <div class="inputWrap">
+            <div class="inputlabel">State</div>
+            <input class="displayCheckState" type="text" name="state" disabled>
+        </div>
+
+        <div class="inputWrap">
+            <div class="inputlabel">Protocol</div>
+            <select class="editCheckProtocol" id="checkProtocol" name="protocol">
+                <option value="http" selected>HTPP</option>
+                <option value="https">HTTPS</option>
+            </select>
+        </div>
+
+        <div class="inputWrap">
+            <div class="inputlabel">Url (not full url.)</div>
+            <input class="editCheckUrl" type="text" name="url" placeholder="Ex : google.com/path">
+        </div>
+
+        <div class="inputWrap">
+            <div class="inputlabel">Method</div>
+            <select class="editCheckMethod" id="checkMethod" name="method">
+                <option value="get" selected>GET</option>
+                <option value="post">POST</option>
+                <option value="put">PUT</option>
+                <option value="delete">DELETE</option>
+            </select>
+        </div>
+
+        <div class="inputWrap">
+            <div class="inputlabel">Status Codes</div>
+            <div id="checkStatusCodes" class="editCheckBoxGroup">
+                200<input class="multiselect" type="checkbox" name="successCodes" value="200">
+                201<input class="multiselect" type="checkbox" name="successCodes" value="201">
+                300<input class="multiselect" type="checkbox" name="successCodes" value="300">
+                301<input class="multiselect" type="checkbox" name="successCodes" value="301">
+            </div>
+        </div>
+
+        <div class="inputWrap">
+            <div class="inputlabel">Timeout Seconds</div>
+            <select class="editCheckTimeout" id="checkTimeout" name="timeoutSeconds">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <div class="btnWrapper">
+            <button class="laBtnBlue" type="submit">Edit Check</button>
+        </div>
+    </form>
+</div>
+
+<hr/>
+<h3>Delete Check ! Warning : You cannot restore it later.</h3>
+<div class="btnWrapper">
+    <button id="deleteCheckBtn" class="daBtnRed" type="submit">Delete Check</button required>
+</div>
