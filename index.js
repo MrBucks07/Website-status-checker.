@@ -7,6 +7,7 @@
 //required dependenices.
 const server = require('./lib/server');
 const workers = require('./lib/workers');
+const db = require('./lib/mongodb');
 
 //app for all working.
 var app = {};
@@ -18,6 +19,9 @@ app.init = function(){
 
     //starting workers.
     workers.init();
+
+    //connecting database.
+    db.init();
 };
 
 //execute init script.
