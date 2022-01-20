@@ -6,29 +6,41 @@
 const mongoose = require('mongoose');
 
 //creating user schema using mongoose.
-const userSchema = new mongoose.Schema(
+const checkSchema = new mongoose.Schema(
     {
-        fullname : {
+        checkId : {
             type : String,
             required : true
-        },
-        username : {
-            type : String,
-            require : true
         },
         mobileno : {
             type : String,
             require : true
         },
-        password : {
+        protocol : {
             type : String,
+            require : true
+        },
+        url : {
+            type : String,
+            require : true
+        },
+        method : {
+            type : String,
+            require : true
+        },
+        successCodes : {
+            type : Array,
+            require : true
+        },
+        timeoutSeconds : {
+            type : Number,
             require : true
         }
     }
 );
 
 //creating model using schema.
-const userModel = mongoose.model("USER",userSchema);
+const checkModel = mongoose.model("CHECK",checkSchema);
 
 //exporting userModel.
-module.exports = userModel;
+module.exports = checkModel;
