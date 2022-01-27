@@ -348,9 +348,9 @@ app.deleteCheck = function(){
             }
         });
     } else {
-        
+        app.setSessionToken(false);
+        window.location = '/session/deleted';
     }
-
 };
 
 
