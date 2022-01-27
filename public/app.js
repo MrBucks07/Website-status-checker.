@@ -110,8 +110,7 @@ app.bindForm = function () {
                         }
                     } else {
                         if (elements[i].classList.value == "timeout") {
-                            var timeoutSeconds = Number(elements[i].value);
-                            payload[elements[i].name] = timeoutSeconds;
+                            payload[elements[i].name] = elements[i].value;
                         } else {
                             payload[elements[i].name] = elements[i].value;
                         }
@@ -469,6 +468,7 @@ app.checksList = function(){
                         };
                         //calling api/checks.
                         app.client.request(undefined,"/api/checks","GET",queryStringObject,undefined,function(statusCode,resPayload){
+                            console.log(statusCode);
                             if (statusCode == 200) {
                                 //selecting table.
                                 var table = document.getElementById("checksListTable");
