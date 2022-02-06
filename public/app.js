@@ -494,7 +494,7 @@ app.checksList = function(){
                         });
                     });
                     //if checks is five hide create check button.
-                    if (checkIds.length == 5) {
+                    if (checkIds.length == 3) {
                         document.getElementById("createCheckButton").style.display = 'none';
                     }
                 } else {
@@ -544,9 +544,7 @@ app.loadCheckToEdit = function(){
                document.querySelector("#editCheck .editCheckMethod").value = resPayload.method;
                document.querySelector("#editCheck .editCheckTimeout").value = resPayload.timeoutSeconds;
                var successCodesChecked = document.querySelectorAll("#editCheck input.multiselect");
-            //    successCodesChecked.forEach(function(){
-                
-            //    });
+
                for(var i=0; i<successCodesChecked.length; i++) {
                 if (resPayload.successCodes.indexOf(successCodesChecked[i].value) > -1) {
                     successCodesChecked[i].checked = true;

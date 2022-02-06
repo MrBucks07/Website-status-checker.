@@ -35,6 +35,12 @@ const checkSchema = new mongoose.Schema(
         timeoutSeconds : {
             type : Number,
             require : true
+        },
+        state : {
+            type: String
+        },
+        lastTimeOfCheck : {
+            type : String
         }
     }
 );
